@@ -1,0 +1,12 @@
+{
+  "name": "cloud-function-terraform",
+  "version": "1.0.0",
+  "description": "Google Cloud Function NodeJS Terraform Example",
+  "scripts": {
+    "start": "functions-framework --target=main --port 8080"
+  },
+  "author": "",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.1.2"
+  }
+}
