@@ -11,7 +11,7 @@ repos:
     rev: v1.14.4
     hooks:
       - id: tf-fmt
-    #   - id: tf-validate
+      - id: tf-validate
 -   repo: https://github.com/Yelp/detect-secrets
     rev: v1.5.0
     hooks:

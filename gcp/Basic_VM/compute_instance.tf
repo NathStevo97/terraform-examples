@@ -1,10 +1,6 @@
-resource "google_compute_network" "vpc_network" {
-  name = "gcp-demo-network"
-}
-
 resource "google_compute_instance" "vm_instance" {
-  name         = "gcp-demo-vm"
-  machine_type = "f1-micro"
+  name         = "${var.resource_prefix}-vm"
+  machine_type = var.machine_type
   tags         = ["web", "dev"]
 
   boot_disk {
