@@ -70,7 +70,7 @@ resource "aws_db_instance" "ckan" {
 }
 
 # Postgres - Create Role
-#CREATE ROLE datastore_ro NOSUPERUSER NOCREATEDB NOCREATEROLE LOGIN PASSWORD 'datastore_ro_password';
+#CREATE ROLE datastore_ro NOSUPERUSER NOCREATEDB NOCREATEROLE LOGIN PASSWORD 'datastore_ro_password'; # pragma: allowlist secret
 
 resource "postgresql_role" "datastore_ro" {
   name            = "datastore_ro"

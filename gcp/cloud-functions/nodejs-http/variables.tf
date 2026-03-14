@@ -106,7 +106,7 @@ variable "bucket_storage_class" {
 variable "excludes" {
   description = "Files to exclude from the cloud function src directory"
   type        = list(string)
-  default     = [
+  default = [
     "node_modules"
   ]
 }

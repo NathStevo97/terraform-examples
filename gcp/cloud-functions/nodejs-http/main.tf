@@ -6,12 +6,12 @@ data "archive_file" "package" {
 }
 
 resource "google_storage_bucket" "function-bucket" {
-  name = var.bucket_name
-  project = var.project
-  location = var.bucket_location
-  force_destroy = true
+  name                        = var.bucket_name
+  project                     = var.project
+  location                    = var.bucket_location
+  force_destroy               = true
   uniform_bucket_level_access = true
-  storage_class = var.bucket_storage_class
+  storage_class               = var.bucket_storage_class
 
   versioning {
     enabled = var.bucket_versioning

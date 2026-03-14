@@ -1,7 +1,7 @@
 #Configure provider and apply authentication values
 provider "aws" {
-  region     = "eu-west-2"
-  version    = ">= 2.7"
+  region  = "eu-west-2"
+  version = ">= 2.7"
 }
 
 #configure resource to be created

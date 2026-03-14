@@ -18,10 +18,10 @@ $ az ad sp create-for-rbac --skip-assignment
 }
 ```
 
-Then, replace `terraform.tfvars` values with your `appId` and `password`. 
+Then, replace `terraform.tfvars` values with your `appId` and `password`.
 Terraform will use these values to provision resources on Azure.
 
-After you've done this, initalize your Terraform workspace, which will download 
+After you've done this, initalize your Terraform workspace, which will download
 the provider and initialize it with the values provided in the `terraform.tfvars` file.
 
 ```shell
@@ -35,7 +35,7 @@ Terraform has been successfully initialized!
 ```
 
 
-Then, provision your AKS cluster by running `terraform apply`. This will 
+Then, provision your AKS cluster by running `terraform apply`. This will
 take approximately 10 minutes.
 
 ```shell

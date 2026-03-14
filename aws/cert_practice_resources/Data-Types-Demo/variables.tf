@@ -2,13 +2,13 @@
 #    type = number
 #}
 variable "elb_name" {
-    type = string
+  type = string
 }
 
 variable "elb_region" {
-    type = list
+  type = list(any)
 }
 
 variable "timeout" {
-    type = number
+  type = number
 }

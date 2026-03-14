@@ -30,7 +30,7 @@ resource "azurerm_public_ip" "main" {
   domain_name_label   = "nathan-${formatdate("DDMMYYhhmmss", timestamp())}"
 }
 
-#create network security group and rule	
+#create network security group and rule
 resource "azurerm_network_security_group" "main" {
   name                = "myNetworkSecurityGroup"
   location            = var.location
@@ -72,7 +72,7 @@ resource "azurerm_linux_virtual_machine" "main" {
   location                        = azurerm_resource_group.main.location
   size                            = "Standard_F2"
   admin_username                  = "adminuser"
-  admin_password                  = "P@ssw0rd1234!"
+  admin_password                  = "P@ssw0rd1234!" # pragma: allowlist secret
   disable_password_authentication = false
   network_interface_ids = [
     azurerm_network_interface.main.id,
@@ -109,15 +109,15 @@ resource "azurerm_linux_virtual_machine" "main" {
   os_profile {
     computer_name  = "hostname"
     admin_username = "nstephenson"
-    admin_password = "Password1234!"
+    admin_password = "Password1234!" # pragma: allowlist secret
   }
   os_profile_linux_config {
     disable_password_authentication = true
      ssh_keys {
 			path = "/home/nstephenson/.ssh/authorized_keys"
 			key_data = "${file("/home/nstephenson/.ssh/id_rsa.pub")}" # ~/.ssh/id_rsa.pub in windows
-			} 
-        
+			}
+
 
   }
 
@@ -131,6 +131,6 @@ provisioner "remote-exec" {
 			host = "${azurerm_public_ip.main.fqdn}"
 			}
 		}
-        
+
 }
 */

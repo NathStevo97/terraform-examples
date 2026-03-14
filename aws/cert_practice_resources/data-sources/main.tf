@@ -3,7 +3,7 @@
 
 #AWS Provider Configuration
 provider "aws" {
-  region     = "eu-west-2"
+  region = "eu-west-2"
 }
 
 #configure data source to search for most appropriate amis for

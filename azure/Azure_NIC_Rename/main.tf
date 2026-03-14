@@ -1,11 +1,11 @@
 resource "azurerm_resource_group" "main" {
   name     = "${var.prefix}-rg"
-  location = "${var.region}"
+  location = var.region
 }
 
 resource "azurerm_resource_group" "network" {
   name     = "${var.prefix}-network-rg"
-  location = "${var.region}"
+  location = var.region
 }
 
 resource "azurerm_virtual_network" "vnet" {
@@ -62,7 +62,7 @@ resource "azurerm_virtual_machine" "vm" {
   os_profile {
     computer_name  = "hostname"
     admin_username = "testadmin"
-    admin_password = "Password1234!"
+    admin_password = "Password1234!" # pragma: allowlist secret
   }
   os_profile_linux_config {
     disable_password_authentication = false

@@ -1,9 +1,3 @@
-variable "prefix" {
-  type        = string
-  default     = "drpoc"
-  description = "resource prefix for ease of identification"
-}
-
 resource "azurerm_resource_group" "primary" {
   name     = "${var.prefix}-primary-rg"
   location = "North Europe"
@@ -15,12 +9,12 @@ resource "azurerm_resource_group" "secondary" {
 }
 
 resource "azurerm_virtual_machine" "vm" {
-  name                  = "${var.prefix}-vm"
-  location              = azurerm_resource_group.primary.location
-  resource_group_name   = azurerm_resource_group.primary.name
-  vm_size               = "Standard_B1s"
-  network_interface_ids = [azurerm_network_interface.vm.id]
-  delete_os_disk_on_termination = true
+  name                             = "${var.prefix}-vm"
+  location                         = azurerm_resource_group.primary.location
+  resource_group_name              = azurerm_resource_group.primary.name
+  vm_size                          = "Standard_B1s"
+  network_interface_ids            = [azurerm_network_interface.vm.id]
+  delete_os_disk_on_termination    = true
   delete_data_disks_on_termination = true
 
   storage_image_reference {
@@ -40,7 +34,7 @@ resource "azurerm_virtual_machine" "vm" {
 
   os_profile {
     admin_username = "test-admin-123"
-    admin_password = "test-pwd-123"
+    admin_password = "test-pwd-123" # pragma: allowlist secret
     computer_name  = "vm"
   }
 

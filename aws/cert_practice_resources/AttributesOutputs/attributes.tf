@@ -1,10 +1,10 @@
 #Configure provider with authentication keys
 provider "aws" {
-  region     = "eu-west-2"
+  region = "eu-west-2"
 }
 #Configure Elastic IP
 resource "aws_eip" "lb" {
-  vpc      = true
+  vpc = true
 }
 #Configure EIP output
 output "eip" {

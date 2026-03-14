@@ -1,5 +1,5 @@
-/* 
-This tf file exists to provision an Azure Resource group and an Azure Kubernetes Service Cluster 
+/*
+This tf file exists to provision an Azure Resource group and an Azure Kubernetes Service Cluster
 */
 resource "random_pet" "prefix" {} #generates a random prefix for resource naming, take out at convenience
 

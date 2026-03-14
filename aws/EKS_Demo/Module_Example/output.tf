@@ -4,7 +4,7 @@ output "eks_cluster_endpoint" {
 }
 
 output "eks_cluster_certificate_authority" {
-  #value = aws_eks_cluster.aws_eks.certificate_authority 
+  #value = aws_eks_cluster.aws_eks.certificate_authority
   value     = module.eks.certificate_authority
   sensitive = true
 }

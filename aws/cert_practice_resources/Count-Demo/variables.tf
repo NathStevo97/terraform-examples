@@ -1,4 +1,4 @@
 variable "instance_names" {
-    type    = list
-    default = ["dev_instance", "prod_instance", "stage_instance"]
+  type    = list(any)
+  default = ["dev_instance", "prod_instance", "stage_instance"]
 }

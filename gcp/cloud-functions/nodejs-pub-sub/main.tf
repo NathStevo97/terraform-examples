@@ -21,11 +21,11 @@ resource "random_id" "bucket_prefix" {
 resource "google_service_account" "default" {
   account_id   = "test-gcf-sa"
   display_name = "Test Service Account"
-  project = var.project
+  project      = var.project
 }
 
 resource "google_pubsub_topic" "default" {
-  name = "functions2-topic"
+  name    = "functions2-topic"
   project = var.project
 }
 
@@ -33,7 +33,7 @@ resource "google_storage_bucket" "default" {
   name                        = "${random_id.bucket_prefix.hex}-gcf-source" # Every bucket name must be globally unique
   location                    = "EU"
   uniform_bucket_level_access = true
-  project = var.project
+  project                     = var.project
 }
 
 data "archive_file" "default" {
@@ -49,7 +49,7 @@ resource "google_storage_bucket_object" "default" {
 }
 
 resource "google_cloudfunctions2_function" "default" {
-  project = var.project
+  project     = var.project
   name        = "function"
   location    = var.location
   description = "a new function"

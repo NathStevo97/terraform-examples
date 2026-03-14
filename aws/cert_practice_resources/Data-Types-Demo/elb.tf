@@ -1,5 +1,5 @@
 provider "aws" {
-  region     = "eu-west-2"
+  region = "eu-west-2"
 }
 
 # Create a new load balancer ona aws

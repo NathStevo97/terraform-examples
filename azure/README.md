@@ -30,9 +30,9 @@ The output includes credentials that you must protect. Be sure that you do not i
 {
   "appId": "xxxxxx-xxx-xxxx-xxxx-xxxxxxxxxx",
   "displayName": "azure-cli-2022-xxxx",
-  "password": "xxxxxx~xxxxxx~xxxxx",
+  "password": "xxxxxx~xxxxxx~xxxxx", # pragma: allowlist secret
   "tenant": "xxxxx-xxxx-xxxxx-xxxx-xxxxx"
-}  
+}
 ```
 
 - Set environment variables based on the output from the service principal command (if on Linux, swap `$Env:` with `export`):

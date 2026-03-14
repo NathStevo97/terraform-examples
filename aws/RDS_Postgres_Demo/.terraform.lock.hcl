@@ -6,6 +6,7 @@ provider "registry.terraform.io/cyrilgdn/postgresql" {
   constraints = "1.18.0"
   hashes = [
     "h1:9iVeIF2TkrOnjLcMijTMJUXgX6miJIU5V75w+thUDek=",
+    "h1:Nf26liFILUZXPh1P2B8T3qtq2Tc7objtm0sBSt0lhh0=",
     "zh:251b609167ce25e974607c0c7dd3f90cfc45980c9068364f896e26c31416d96c",
     "zh:317980d14a6a171f118bb522ffd02046e508d98100073f97671aeb2adae30d79",
     "zh:3622c6414e91f8ccceed94ddf12062a22c14de4fac73c6142b009ae791ca7cd4",
@@ -25,7 +26,7 @@ provider "registry.terraform.io/cyrilgdn/postgresql" {
 
 provider "registry.terraform.io/hashicorp/aws" {
   version     = "4.67.0"
-  constraints = ">= 4.52.0"
+  constraints = ">= 2.70.0, >= 4.52.0"
   hashes = [
     "h1:3t9uBosa4EwbJF7f8LONm4YO3vB9r5CFSgxKiP3UrYw=",
     "h1:5Zfo3GfRSWBaXs4TGQNOflr1XaYj6pRnVJLX5VAjFX4=",
